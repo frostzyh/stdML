@@ -3,7 +3,7 @@
 (* To run the test, add a new line to the top of this file: use "homeworkname.sml"; *)
 (* All the tests should evaluate to true. For example, the REPL should say: val test1 = true : bool *)
 
-use "hw2.sml";
+use "hw2_Sub3.sml";
 
 val test1 = all_except_option ("string", ["string"]) = SOME []
 
@@ -50,5 +50,7 @@ val chal1 = officiate_challenge ([(Clubs,Ace),(Spades,Ace),(Clubs,Ace),(Spades,A
            = 3
 
 
-val chal2 = careful_player ([(Spades,Num 7),(Hearts,King),(Clubs,Ace),(Diamonds,Num 2)], 17)
-	
+val cp1 = careful_player ([(Spades,Num 7),(Hearts,King),(Clubs,Ace),(Diamonds,Num 2)], 17)
+val cp2 = careful_player ([(Spades,Num 7),(Hearts,King),(Clubs,Ace),(Diamonds,Num 2)], 18)
+val cp3 = careful_player ([], 0)
+val cp4 = careful_player ([(Diamonds,Num 2),(Clubs,Ace)], 11)
