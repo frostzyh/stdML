@@ -3,7 +3,8 @@
 (* To run the test, add a new line to the top of this file: use "homeworkname.sml"; *)
 (* All the tests should evaluate to true. For example, the REPL should say: val test1 = true : bool *)
 
-use "hw2_Sub3.sml";
+use "hw2_Sub4.sml";
+use "carePlayer.sml";
 
 val test1 = all_except_option ("string", ["string"]) = SOME []
 
@@ -50,7 +51,14 @@ val chal1 = officiate_challenge ([(Clubs,Ace),(Spades,Ace),(Clubs,Ace),(Spades,A
            = 3
 
 
-val cp1 = careful_player ([(Spades,Num 7),(Hearts,King),(Clubs,Ace),(Diamonds,Num 2)], 17)
-val cp2 = careful_player ([(Spades,Num 7),(Hearts,King),(Clubs,Ace),(Diamonds,Num 2)], 18)
-val cp3 = careful_player ([], 0)
-val cp4 = careful_player ([(Diamonds,Num 2),(Clubs,Ace)], 11)
+val cp11 = careful_player ([(Spades,Num 7),(Hearts,King),(Clubs,Ace),(Diamonds,Num 2)], 17)
+val cp12 = careful_player2 ([(Spades,Num 7),(Hearts,King),(Clubs,Ace),(Diamonds,Num 2)], 17)
+
+val cp21 = careful_player ([(Spades,Num 7),(Hearts,King),(Clubs,Ace),(Diamonds,Num 2)], 18)
+val cp22 = careful_player2 ([(Spades,Num 7),(Hearts,King),(Clubs,Ace),(Diamonds,Num 2)], 18)
+
+val cp31 = careful_player ([], 0)
+val cp32 = careful_player2 ([], 0)
+
+val cp41 = careful_player ([(Diamonds,Num 2),(Clubs,Ace)], 11)
+val cp42 = careful_player2 ([(Diamonds,Num 2),(Clubs,Ace)], 11)
